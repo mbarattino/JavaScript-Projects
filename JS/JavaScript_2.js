@@ -1,19 +1,24 @@
-function my_Second_Function() {
-    var String = "This text is blue";
-    var result = String.fontcolor("blue");
-    document.getElementById("Blue_Text").innerHTML = result;
+function validateForm() {
+    var x = document.forms["myForm"]["firstname"].value;
+    if(x == "") {
+        alert("First Name must be filled out");
+        return false;
+    }
+
+    var y = document.forms["myForm"]["lastname"].value;
+    if(y == "") {
+        alert("Last Name must be filled out");
+        return false;
+    }
+
+    var z = document.forms["myForm"]["phone_number"].value;
+    if(z == "") {
+        alert("Phone number must be filled out");
+        return false;
+    }
 }
 
-function myFunction() {
-    var sentence = "I am learning";
-    sentence += " a lot from this book!";
-    document.getElementById("Concatenate").innerHTML = sentence;
-}
-
-
-
-
-function addition_Function() {
-    var addition = 2+2;
-    document.getElementById("Math").innerHTML = "2 + 2 = " + addition;
+function displayType(player) {
+    var playerType = player.getAttribute("data-player-type");
+    alert(playerType + " plays on the " + player.innerHTML);
 }

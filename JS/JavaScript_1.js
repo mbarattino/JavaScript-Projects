@@ -1,50 +1,49 @@
-alert("Hello World!");
+function favorite_City() {
+    var City_Output;
+    var City_Input = document.getElementById("input_city").value;
+    var string = " is the best city in Texas!"
+    switch(City_Input) {
+        case "Austin":
+            City_Output = "Austin" + string;
+        break;
+        case "Dallas":
+            City_Output = "Dallas" + string;
+        break;
+        case "Fort Worth":
+            City_Output = "Fort Worth" + string;
+        break;
+        case "Houston":
+            City_Output = "Houston" + string;
+        break;
+        case "San Antonio":
+            City_Output = "San Antonio" + string;
+        break;
+        default:
+            City_Output = "Please enter a city from the list above";
+    }
+    document.getElementById("city_output").innerHTML = City_Output;
+}
 
-window.alert("Hello World!");
+function Hello_World_Function() {
+    var A = document.getElementsByClassName("Click");
+    A[0].innerHTML = "This text has changed!";
+}
 
-document.write('Hello World!');
+function myImage() {
+    var A = document.getElementById("ID_Name");
+    var ATX = A.getContext("2d");
+    var img = document.getElementById("image1");
+    ATX.drawImage(img,0,0);
+}
 
-document.write("<br>");
+window.onload = function() {
+    var c = document.getElementById("gradient");
+    var ctx = c.getContext("2d");
 
-var A = "This is a string";
-document.write(A);
+    var grd = ctx.createLinearGradient(0, 0, 500, 0);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "purple");
 
-document.write("<br>");
-
-var Texas = "Don't mess with Texas!"
-window.alert(Texas);
-
-document.write("\"Adding in quotations\"");
-
-document.write("<br>");
-
-document.write("Make sure" + " you brush your teeth" + " before bed");
-
-document.write("<br>");
-
-var T = "Texas" + " Rangers"
-document.write(T);
-
-document.write("<br>");
-
-var Mom = "Lauriana", Dad = "Matt", Child = "Dallas";
-document.write(Child);
-
-document.write("<br>");
-
-var Mom = Mom.fontcolor("Green");
-var Dad = Dad.fontcolor("Blue");
-var Child = Child.fontcolor("Red");
-document.write(Child);
-
-document.write("<br>");
-
-document.write(4+4);
-
-document.write("<br>");
-
-function My_First_Function() {
-    var String = "This text is green!";
-    var result = String.fontcolor("green");
-    document.getElementById("Green_Text").innerHTML = result;
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, 500, 250);
 }
