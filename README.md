@@ -1,2 +1,2 @@
 # JavaScript-Projects
-HTML websites with JavaScript. JavaScript starts out very basic and then works up in complexity, culminating in my personal website in the mbarattino.github.io repository.
+This is a working calculator created using JavaScript in conjunction with HTML and CSS. The calculator allows for all basic math functions - addition, subtraction, multiplication and division.
